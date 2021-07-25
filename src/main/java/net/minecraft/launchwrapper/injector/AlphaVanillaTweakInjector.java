@@ -31,9 +31,9 @@ public class AlphaVanillaTweakInjector implements IClassTransformer {
         Class<?> clazz;
 
         try {
-            clazz = getaClass("net.minecraft.client.MinecraftApplet");
+            clazz = getaClass("su.murbyte.client.MurbyteApplet");
         } catch (ClassNotFoundException ignored) {
-            clazz = getaClass("com.mojang.minecraft.MinecraftApplet");
+            clazz = getaClass("su.murbyte.client.MurbyteApplet");
         }
 
         System.out.println("AlphaVanillaTweakInjector.class.getClassLoader() = " + AlphaVanillaTweakInjector.class.getClassLoader());
@@ -73,7 +73,7 @@ public class AlphaVanillaTweakInjector implements IClassTransformer {
         params.put("sessionid", sessionId);
 
         final Frame launcherFrameFake = new Frame();
-        launcherFrameFake.setTitle("Minecraft");
+        launcherFrameFake.setTitle("Murbyte");
         launcherFrameFake.setBackground(Color.BLACK);
 
         final JPanel panel = new JPanel();
